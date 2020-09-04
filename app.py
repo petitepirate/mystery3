@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, redirect, url_for
 from flask_debugtoolbar import DebugToolbarExtension
-from forex_python.converter import CurrencyRates, CurrencyCodes, Decimal
+from forex_python.converter import CurrencyRates, CurrencyCodes, Decimal, get_rate
 import math
 
 
@@ -25,11 +25,10 @@ def convert():
         con_from = request.args["convert_from"]
         con_to = request.args["convert_to"]
         amount = Decimal(request.args["amount"])
-        symbol = cc.get_symbol(con_to)
-        converted_amt = c.convert(con_from, con_to, amount)
-        display_amt = round(converted_amt, 2)
 
-        return render_template("rate.html", con_from=con_from, con_to=con_to, display_amt=display_amt, symbol=symbol)
+        converted_amt = get_rate(from_code, to_code, float(amount))
+
+        return render_template("rate.html", con_from=con_from, con_to=con_to, converted_amt=converted_amt)
     except:
         return redirect(url_for('error'))
 
