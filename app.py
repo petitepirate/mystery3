@@ -4,7 +4,7 @@ from forex_python.converter import CurrencyRates, CurrencyCodes, Decimal
 import math
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "327-446-427"
+app.config['SECRET_KEY'] = "1234"
 debug = DebugToolbarExtension(app)
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 c = CurrencyRates(force_decimal=True)
