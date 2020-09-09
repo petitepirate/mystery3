@@ -1,5 +1,1 @@
-Only one small question this week - I chose to have a dropdown selection
-of currencies in my html index based off of the JSON that forex provides, but 
-a lot of the codes don't seem to work.  But the standard ones like AUS/EUR/USD 
-do work.  I'm just curious if I'm just pulling the data incorrectly or if its 
-something else causing the issue.
+Python Currency Converter
