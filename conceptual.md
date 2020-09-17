@@ -24,7 +24,7 @@ Answer the following questions below:
 
 - You can pass information to Flask either as a parameter in a route URL (like '/foods/pretzel') or using a URL query param (like 'foods?type=pretzel'). How might you choose which one is a better fit for an application?
 
-	URL Querys are usually used when returning extra info, or when handling forms. URL parameters should be the main subjuect of the page.
+	URL Querys are usually used when returning extra info, or when handling forms. URL parameters should be the main subjuect of the page.  path param for single resource
 
 - How do you collect data from a URL placeholder parameter using Flask?
 
@@ -36,7 +36,7 @@ Answer the following questions below:
 
 - How do you collect data from the body of the request using Flask?
 
-	 !!!!!!!!!!!!!!!!!!I think this is asking for request.form? save that to a variable to be saved in database
+	request.form/request.body/request.args and save that to a variable to be saved in database
 
 - What is a cookie and what kinds of things are they commonly used for?
 
@@ -48,4 +48,4 @@ Answer the following questions below:
 
 - What does Flask's `jsonify()` do?
 
-	Turns data into JSON.
+	Turns data into JSON.  Specifically python type variables into json.
